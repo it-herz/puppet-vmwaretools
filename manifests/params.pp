@@ -60,7 +60,7 @@ class vmwaretools::params {
   if $::vmwaretools::force_install == true {
     $install_command = "echo 'yes' | ${::vmwaretools::working_dir}/vmware-tools-distrib/vmware-install.pl"
   } else {
-    $install_command = "${vmwaretools::working_dir}/vmware-tools-distrib/vmware-install.pl -d"
+    $install_command = "${vmwaretools::working_dir}/vmware-tools-distrib/vmware-install.pl -d -f"
   }
 
   # Workaround for 'purge' bug on RH-based systems
